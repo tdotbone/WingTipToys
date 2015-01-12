@@ -6,6 +6,9 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+// added the following namespaces
+using System.Linq;
+using WingTipToys.Models;
 
 namespace WingTipToys
 {
@@ -65,10 +68,18 @@ namespace WingTipToys
                 }
             }
         }
-
+                
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        // added the following method GetCategories() as a data control
+        public IQueryable<Category> GetCategories()
+        {
+            var db = new WingTipToys.Models.ProductContext();
+            IQueryable<Category> query = _db.Categories;
+            return query;
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
