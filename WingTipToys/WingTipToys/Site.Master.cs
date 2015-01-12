@@ -78,7 +78,9 @@ namespace WingTipToys
         public IQueryable<Category> GetCategories()
         {
             var db = new WingTipToys.Models.ProductContext();
-            IQueryable<Category> query = _db.Categories;
+            //IQueryable<Category> query = _db.Categories;  // the '_' character caused build error... ?
+
+            IQueryable<Category> query = db.Categories;
             return query;
         }
 
