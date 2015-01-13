@@ -1,5 +1,8 @@
-﻿<%@ Page Title="Product Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductDetails.aspx.cs" Inherits="WingtipToys.ProductDetails" %> <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"> 
-    <asp:FormView ID="productDetail" runat="server" ItemType="WingtipToys.Models.Product" SelectMethod ="GetProduct" RenderOuterTable="false"> 
+﻿<%@ Page Title="Product Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" 
+    CodeBehind="ProductDetails.aspx.cs" Inherits="WingtipToys.ProductDetails" %> 
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"> 
+    <asp:FormView ID="productDetail" runat="server" ItemType="WingtipToys.Models.Product" 
+        SelectMethod ="GetProduct" RenderOuterTable="false"> 
         <ItemTemplate> 
             <div> 
                 <h1><%#:Item.ProductName %></h1> 
@@ -24,4 +27,14 @@
                 </tr> 
             </table> 
         </ItemTemplate> 
-    </asp:FormView>                                                                                                                                                                                   </asp:Content>
+    </asp:FormView>  
+
+    <!--This code uses a FormView control to display details about an individual product. 
+    This markup uses methods like those that are used to display data in the ProductList.aspx page. 
+    The FormView control is used to display a single record at a time from a data source. When you use the FormView control, 
+    you create templates to display and edit data-bound values. The templates contain controls, binding expressions, 
+    and formatting that define the look and functionality of the form. -->
+    
+    
+    <!-- To connect the above markup to the database, you must add additional code to the ProductDetails.aspx code. -->
+                                                                                                                                                                                  </asp:Content>
