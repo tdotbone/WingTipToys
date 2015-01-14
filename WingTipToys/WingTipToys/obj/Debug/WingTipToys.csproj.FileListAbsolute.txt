@@ -49,4 +49,3 @@ C:\Users\e5cqtiy\WebFormProjects\WingTipToys\WingTipToys\WingTipToys\bin\Microso
 C:\Users\e5cqtiy\WebFormProjects\WingTipToys\WingTipToys\WingTipToys\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\e5cqtiy\WebFormProjects\WingTipToys\WingTipToys\WingTipToys\obj\Debug\WingTipToys.dll
 C:\Users\e5cqtiy\WebFormProjects\WingTipToys\WingTipToys\WingTipToys\obj\Debug\WingTipToys.pdb
-C:\Users\e5cqtiy\WebFormProjects\WingTipToys\WingTipToys\WingTipToys\obj\Debug\WingTipToys.csprojResolveAssemblyReference.cache

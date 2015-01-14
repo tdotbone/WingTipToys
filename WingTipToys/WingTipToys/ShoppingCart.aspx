@@ -22,7 +22,7 @@
              <asp:TemplateField HeaderText="Item Total">
                 <ItemTemplate>
                     <%#: String.Format("{0:c}",
-                    ((Convert.ToDouble(Item.Quantity)) * Convert.ToDouble(Items.Product.UnitPrice)))%>
+                    ((Convert.ToDouble(Item.Quantity)) * Convert.ToDouble(Item.Product.UnitPrice)))%>
                 </ItemTemplate>
              </asp:TemplateField>
         </Columns>
