@@ -74,5 +74,21 @@ namespace WingTipToys.Logic
 
             return _db.ShoppingCartItems.Where(c => c.CartID == ShoppingCartID).ToList();
         }
+
+        //Tutorial page 89, add the GetTotal() method
+        public decimal GetTotal()
+        {
+            ShoppingCartID = GetCartID();
+            // Multiply product price by quantity of that product to get
+            // the current price for each of those products in the cart.
+            // Sum all product price totals to get the cart total.
+
+            decimal? total = decimal.Zero;
+            total = (decimal?)(from cartItems in _db.ShoppingCartItems
+                               where cartItems.CartID == ShoppingCartID
+                               select (int?)cartItems.Quantity *
+                               cartItems.Product.UnitPrice).Sum();
+            return total ?? decimal.Zero;
+        }
     }
 }
