@@ -103,13 +103,11 @@ namespace WingTipToys.Models
                 new Product
                 {
                     ProductID = 6,
-                    ProductName = "Convertible Car",
-                    Description = "This convertible car is fast!" +
-                    " The engine is powered by a neutrino based battery (not included)." +
-                    "Power it up and let it go!",
-                    ImagePath="carconvert.png",
-                    UnitPrice = 22.50,
-                    CategoryID = 1
+                    ProductName = "Ace Plane",
+                    Description = "Authentic airplane toy. Features realistic color and details.",
+                    ImagePath="planeace.png",
+                    UnitPrice = 95.00,
+                    CategoryID = 2
                 },
                 new Product
                 {
