@@ -121,6 +121,8 @@ namespace WingTipToys.Logic
                             {
                                 if (CartItemUpdates[i].PurchaseQuantity < 1 ||
                                    CartItemUpdates[i].RemoveItem == true)
+                                    // don't know how to clear the error that is a result of line 123
+                                    // going to move on and see what effect it has
                                 {
                                     RemoveItem(cartID, cartItem.ProductID);
                                 }

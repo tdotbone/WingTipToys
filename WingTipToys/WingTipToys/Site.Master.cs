@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 // added the following namespaces
 using System.Linq;
 using WingTipToys.Models;
+using WingTipToys.Logic;
 
 namespace WingTipToys
 {
@@ -74,7 +75,19 @@ namespace WingTipToys
 
         }
 
-        // added the following method GetCategories() as a data control
+        // added the following from tutorial page 101?
+        protected void Page_PreRender (object sender, EventArgs e)
+        {
+            using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
+            {
+                string cartStr = string.Format("Cart ({0})",
+                    usersShoppingCart.Getcount());
+                cartCount.InnerText = cartStr;
+            }
+        }
+
+
+        // added the following method GetCategories() as a data control from tutorial page ?
         public IQueryable<Category> GetCategories()
         {
             var db = new WingTipToys.Models.ProductContext();
