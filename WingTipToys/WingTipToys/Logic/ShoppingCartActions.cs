@@ -119,10 +119,10 @@ namespace WingTipToys.Logic
                         {
                             if (cartItem.Product.ProductID == CartItemUpdates[i].ProductId)
                             {
-                                if (CartItemUpdates[i].PurchaseQuantity < 1 ||
-                                   CartItemUpdates[i].RemoveItem == true)
+                               //if (CartItemUpdates[i].PurchaseQuantity < 1 || CartItemUpdates[i].RemoveItem == true)
                                     // don't know how to clear the error that is a result of line 123
                                     // going to move on and see what effect it has
+                                if (CartItemUpdates[i].PurchaseQuantity < 1)
                                 {
                                     RemoveItem(cartID, cartItem.ProductID);
                                 }
@@ -142,7 +142,7 @@ namespace WingTipToys.Logic
             }
         }
 
-        public void RemoveIem(string removeCartID, int removeProductID)
+        public void RemoveItem(string removeCartID, int removeProductID)
         {
             using (var db = new WingTipToys.Models.ProductContext())
             {
